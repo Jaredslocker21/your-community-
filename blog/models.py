@@ -6,8 +6,6 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 
-# taken from the I think therefore I blog django walkthrough
-
 
 class CommunityPost(models.Model):
     """ Community Post Model """
@@ -46,6 +44,8 @@ class CommunityPost(models.Model):
         """
         return self.likes.count()
      
+# this class was taken from I think therefore I blog
+
 
 class Comment(models.Model):
     """Comment Model"""
