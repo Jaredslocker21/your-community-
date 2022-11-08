@@ -7,7 +7,6 @@ from .models import CommunityPost
 
 class PostList(generic.ListView):
     model = CommunityPost
-    queryset = CommunityPost.objects.filter(status=1).order_by('-created_on')
+    queryset = CommunityPost.objects.filter().order_by('-created_on')
     template_name = 'index.html'
-    paginated_by = 8
-
+    paginated_by = 6

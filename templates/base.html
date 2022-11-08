@@ -23,7 +23,7 @@
 <body>
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg align-items-center navbar-dark bg-white">
+    <nav class="navbar navbar-expand-lg align-items-center navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Y<span class="red-o">ou</span>r<span
                         class="thin">| Community </span></span></span></a>
@@ -38,17 +38,17 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'create_member' %}"> Create a Member</a>
+                        <a class="nav-link" href="#"> Create a Member</a>
                     </li>               
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link" href="#">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link" href="#">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link" href="#">Login</a>
                     </li>
                     {% endif %}
 
@@ -59,6 +59,7 @@
             </div>
         </div>
     </nav>
+    
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
