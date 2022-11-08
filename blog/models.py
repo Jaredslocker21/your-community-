@@ -18,8 +18,9 @@ class CommunityPost(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     blurb = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
-    created_on = models.DateTimeField(choices=STATUS, default=0)
+    created_on = models.DateTimeField(auto_now_add=True)
     featured_image = CloudinaryField('image', default='placeholder')
+    status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User,
         related_name='recipe_likes',
