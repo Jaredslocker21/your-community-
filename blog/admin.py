@@ -8,9 +8,10 @@ class CommunityPostAdmin(SummernoteModelAdmin):
     """
     This class displays a summernote model and  a nice list filter
     """
+    list_display = ('title', 'slug', 'status', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
-    summernote_fields = ('blurb')
+    summernote_fields = ('blurb',)
 
 
 @admin.register(Comment)
